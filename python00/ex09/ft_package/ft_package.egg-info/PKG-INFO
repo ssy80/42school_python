@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: ft_package
+Version: 0.0.1
+Summary: A simple package
+Home-page: https://github.com/ssian/ft_package
+Author: ssian
+Author-email: ssian@42mail.sutd.edu.sg
+License: MIT
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# A simple package
+
+## Provide some utility functions
+
+**Example:**
+
+*Count matching string in a list*
+
+```
+    count_in_list(["toto", "tata", "toto"], "toto") 
+    output: 2
+```
