@@ -1,3 +1,55 @@
+install venv
+
+python01
+
+python3.10 -m venv .venv
+source .venv/bin/activate
+pip install numpy
+pip install matplotlib
+pip install flake8
+
+
+
+
+1) install python 3.10
+https://www.rosehosting.com/blog/how-to-install-python-3-10-on-debian-11/
+
+2) python3 -m venv .venv
+   python3.10 -m venv .venv
+
+3) source .venv/bin/activate
+
+python --version
+
+python3 -m venv .venv
+
+python3.10 -m venv .venv
+source .venv/bin/activate
+pip install tqdm
+pip install build
+pip install flake8
+
+Package Requirement
+pip install tqdm
+pip install build
+pip install flake8
+alias norminette=flake8
+
+get current package into requirements.txt
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
+
+Create package
+
+python -m build
+
+pip install dist/ft_package-0.0.1-py3-none-any.whl
+pip install dist/ft_package-0.0.1.tar.gz
+
+
+
+
 """class ft_filter:
     __doc__ = filter.__doc__  # copy docstring
 

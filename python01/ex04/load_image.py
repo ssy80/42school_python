@@ -6,7 +6,8 @@ from os import path as ospath
 
 def ft_load(path: str) -> array:
     """
-    Load a JPG/JPEG image file and convert it to a array, and return the image array.
+    Load a JPG/JPEG image file and convert it to a array, \
+    and return the image array.
     """
     file_ext = ospath.splitext(path)[1][1:].upper()
     if not (file_ext == "JPG" or file_ext == "JPEG"):
@@ -21,5 +22,4 @@ def ft_load(path: str) -> array:
         raise ValueError("file not found or actual file is not JPEG format")
 
     img_arr = image.imread(path)
-    print("The shape of image is:", img_arr.shape)
     return img_arr

@@ -4,7 +4,8 @@ import numpy as np
 def is_2d_list(lst):
     """
     Check is valid list, return False if not.
-    length must not be empty, must be a list instance, every list in the main list is also a list,
+    length must not be empty, must be a list instance, \
+    every list in the main list is also a list,
     all inner list must not be empty
     """
     if not isinstance(lst, list):
@@ -16,11 +17,11 @@ def is_2d_list(lst):
     if not all(isinstance(x, list) for x in lst):
         return False
 
-    if any(len(x)==0 for x in lst):
+    if any(len(x) == 0 for x in lst):
         return False
 
     first = len(lst[0])
-    if not all(len(x)==first for x in lst):
+    if not all(len(x) == first for x in lst):
         return False
 
     return True
@@ -31,7 +32,8 @@ def slice_me(family: list, start: int, end: int) -> list:
     Display shape of current list and shape after slicing with start and end.
     """
     if not is_2d_list(family):
-        raise ValueError("not a list of list, or not list of list with equal length, or empty list")
+        raise ValueError("not a list of list, or not list of list \
+            with equal length, or empty list")
 
     arr = np.array(family)
     print(f"My shape is : {arr.shape}")
@@ -39,7 +41,6 @@ def slice_me(family: list, start: int, end: int) -> list:
     print(f"My new shape is : {arr.shape}")
     arr = arr.tolist()
     return arr
-
 
 
 """def main():

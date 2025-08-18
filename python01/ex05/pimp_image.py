@@ -1,7 +1,7 @@
+import numpy as np
+import matplotlib.pyplot as plt
 from load_image import ft_load
-from PIL import Image
-from numpy import array, expand_dims, zeros, clip, uint8, dot, multiply
-from matplotlib import image, pyplot as plt
+from numpy import array
 
 
 def show_image(img_array):
@@ -51,24 +51,27 @@ def ft_blue(array) -> array:
     return array1
 
 
-# when all three channels (R, G, B) are set to the same value, the color is always a shade of grey
-# gray = dot(array1[:,:,:3], [0.299, 0.587, 0.114]) - gray=(R×0.299)+(G×0.587)+(B×0.114)
+# when all three channels (R, G, B) are set to the same value,
+# the color is always a shade of grey
+# gray = dot(array1[:,:,:3], [0.299, 0.587, 0.114])
+# -> gray=(R×0.299)+(G×0.587)+(B×0.114)
 # dot product / matrix multiplication
 # np.dot works along the last dimension of the array (the 3 channels).
 # np.dot does for every pixel in the image.
 def ft_grey(array) -> array:
     """
-    Multiply all pixels(R,G,B) with grey weights (0.299, 0.587, 0.114) to get grey values
-    Set same grey values to (R,G,B) to change image to grey scale 
+    Multiply all pixels(R,G,B) with grey weights (0.299, 0.587, 0.114)
+    to get grey values
+    Set same grey values to (R,G,B) to change image to grey scale
     """
     array1 = array.copy()
 
     gray_weights = [0.299, 0.587, 0.114]
-    gray = dot(array1[:,:,:3], gray_weights) 
-    gray = gray.astype(uint8)
-    array1[:,:, 0] = gray
-    array1[:,:, 1] = gray
-    array1[:,:, 2] = gray
+    gray = np.dot(array1[:, :, :3], gray_weights)
+    gray = gray.astype(np.uint8)
+    array1[:, :, 0] = gray
+    array1[:, :, 1] = gray
+    array1[:, :, 2] = gray
     return array1
 
 
@@ -78,7 +81,7 @@ def main():
 
         org_array = ft_load("landscape.jpg")
         print(org_array)
-        
+
         img_array = ft_invert(org_array)
         show_image(img_array)
 
