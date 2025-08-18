@@ -1,0 +1,49 @@
+"""class ft_filter:
+    __doc__ = filter.__doc__  # copy docstring
+
+    def __init__(self, fn, it):
+        self.fn = fn
+        self.it = iter(it)  # ensure iterator
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.fn is None:
+            # return next truthy item
+            while True:
+                x = next(self.it)  # may raise StopIteration
+                if x:
+                    return x
+        else:
+            # return next item where fn(x) is true
+            while True:
+                x = next(self.it)
+                if self.fn(x):
+                    return x
+
+"""
+
+#generator
+    g = (NESTED_MORSE[c.upper()] for c in arg)
+    print(next(g))
+    print(next(g))
+    print(next(g))
+
+
+
+
+Image
+(3,3,3)?
+[
+    [                  # row a[0]
+        [0,0,0],       # column a[0][0]   
+        [1,1,1],       # column a[0][1]
+        [2,2,2]        # column a[0][2]
+    ],  
+    [[1,1,1],[2,2,2],[3,3,3]], # row a[1]
+    [[2,2,2],[3,3,3],[4,4,4]]  # row a[2]
+]
+
+
+
