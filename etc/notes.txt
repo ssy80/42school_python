@@ -3,10 +3,12 @@ install venv
 python01
 
 python3.10 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install numpy
 pip install matplotlib
 pip install flake8
+pip install pandas
 
 
 
@@ -28,6 +30,10 @@ source .venv/bin/activate
 pip install tqdm
 pip install build
 pip install flake8
+pip install seaborn
+pip install pandas
+pip install matplotlib
+
 
 Package Requirement
 pip install tqdm
