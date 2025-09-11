@@ -25,6 +25,9 @@ python --version
 
 python3 -m venv .venv
 
+#Need for graph display
+sudo apt install python3-tk
+
 python3.10 -m venv .venv
 source .venv/bin/activate
 pip install tqdm
@@ -33,6 +36,7 @@ pip install flake8
 pip install seaborn
 pip install pandas
 pip install matplotlib
+pip install tk
 
 
 Package Requirement
