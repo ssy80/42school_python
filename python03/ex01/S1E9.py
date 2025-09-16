@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 
 
+# abstract class is a class with at least one abstract method
 class Character(ABC):
     """Abstract Base Class of Character"""
 
@@ -14,11 +15,6 @@ class Character(ABC):
         """Abstract method, sub class to implement"""
         pass
 
-    def __str__(self):
-        return f"{self.__class__.__name__}(first_name: {self.first_name}, is_alive: {self.is_alive})"
-
-    def __repr__(self):
-        return self.__str__()
 
 class Stark(Character):
     """Stark character Class"""
@@ -27,9 +23,10 @@ class Stark(Character):
         """Change Stark is_alive to False """
         self.is_alive = False
 
-    
 
 """def main():
+    '''main()'''
+
     Ned = Stark("Ned")
     print(Ned.__dict__)
     print(Ned.is_alive)
@@ -43,7 +40,7 @@ class Stark(Character):
     print(Lyanna.__dict__)
 
     '''hodor = Character("hodor")'''
-"""
+
 
 if __name__ == "__main__":
-    main()
+    main()"""

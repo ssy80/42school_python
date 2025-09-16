@@ -19,5 +19,4 @@ def load(path: str) -> pd.DataFrame:
     print(load("./life_expectancy_years.csv"))
 
 if __name__ == "__main__":
-    main()
-"""
+    main()"""

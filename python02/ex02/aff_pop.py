@@ -72,7 +72,7 @@ def main():
     y_ticks = list(range(0, max_pop + 20000000, 20000000))
     val_list = []
     for i in y_ticks:
-        val = i/1000000
+        val = int(i/1000000)
         val = str(val) + "M"
         val_list.append(val)
     plt.yticks(y_ticks, val_list)
