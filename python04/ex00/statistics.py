@@ -108,8 +108,8 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
             print(f"Error: unknown: {v}")
 
 
-def main():
-    """main()"""
+"""def main():
+    '''main()'''
 
     ft_statistics(1, 42, 360, 11, 64, toto="mean",
                   tutu="median", tata="quartile")
@@ -128,4 +128,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()"""

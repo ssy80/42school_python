@@ -4,7 +4,11 @@ def callLimit(limit: int):
     count = 0
 
     def callLimiter(function):
+        """Decorator that limits the number of calls to a function."""
+
         def limit_function(*args: any, **kwds: any):
+            """Limit the number of calls to a function."""
+
             nonlocal count
             if count < limit:
                 count += 1
@@ -16,8 +20,8 @@ def callLimit(limit: int):
     return callLimiter
 
 
-def main():
-    """main()"""
+"""def main():
+    '''main()'''
 
     @callLimit(3)
     def f():
@@ -33,4 +37,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()"""

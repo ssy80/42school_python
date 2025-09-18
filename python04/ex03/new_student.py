@@ -23,11 +23,12 @@ class Student:
     id: str = field(init=False, default_factory=generate_id)
 
     def __post_init__(self):
+        """Post-initialization to set the login attribute."""
         self.login = self.name[0] + self.surname
 
 
-def main():
-    """main()"""
+"""def main():
+    '''main()'''
 
     student = Student(name="Edward", surname="agle")
     student1 = Student(name="James", surname="test")
@@ -39,4 +40,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()"""

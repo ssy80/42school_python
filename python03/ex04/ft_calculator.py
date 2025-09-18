@@ -2,16 +2,19 @@ class calculator:
 
     @staticmethod
     def dotproduct(V1: list[float], V2: list[float]) -> None:
+        """Calculate and print the dot product of two vectors"""
         total = sum(a * b for a, b in zip(V1, V2))
         print(f"Dot product is: {total}")
 
     @staticmethod
     def add_vec(V1: list[float], V2: list[float]) -> None:
+        """Calculate and print the addition of two vectors"""
         total = [float(a + b) for a, b in zip(V1, V2)]
         print(f"Add Vector is: {total}")
 
     @staticmethod
     def sous_vec(V1: list[float], V2: list[float]) -> None:
+        """Calculate and print the subtraction of two vectors"""
         total = [float(a - b) for a, b in zip(V1, V2)]
         print(f"Sous Vector is: {total}")
 

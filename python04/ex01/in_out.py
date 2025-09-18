@@ -17,6 +17,7 @@ def outer(x: int | float, function) -> object:
     count = 0
 
     def inner() -> float:
+        """Apply the function to the number and count calls."""
         nonlocal count
         nonlocal x
         count += 1
@@ -35,8 +36,8 @@ If you return the inner function, it retains those variables
 '''
 
 
-def main():
-    """main()"""
+"""def main():
+    '''main()'''
 
     my_counter = outer(3, square)
     print(my_counter())
@@ -50,4 +51,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main()"""
